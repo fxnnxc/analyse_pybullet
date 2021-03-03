@@ -12,13 +12,13 @@ p.connect(p.GUI)
 p.setAdditionalSearchPath(pybullet_data.getDataPath())
 
 # === hyper parameters ===
-radius = np.random.random()*5+2
+radius = np.random.random()*4+2
 theta =  np.random.random()* np.pi*2 
-period = 100
+period = 200
 
 # === create object ===
 target_pos = [radius * np.cos(theta), radius* np.sin(theta)]
-target = p.loadURDF("cube_small.urdf", target_pos+[0], globalScaling=5)
+target = p.loadURDF("cube_small.urdf", target_pos+[0], globalScaling=3)
 p.changeVisualShape(target, -1, rgbaColor=[255,255,0,1])
 p.changeDynamics(target, -1, mass=1)
 p.setTimeStep(1)

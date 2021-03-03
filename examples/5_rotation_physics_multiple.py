@@ -12,8 +12,8 @@ p.connect(p.GUI)
 p.setAdditionalSearchPath(pybullet_data.getDataPath())
 
 # === hyper parameters ===
-num_agents = 100
-radius = [np.random.random()*4+3 for i in range(num_agents)]
+num_agents = 200
+radius = [np.random.random()*1+3 for i in range(num_agents)]
 theta =  [np.random.random()* np.pi*2 for i in range(num_agents)] 
 period = [np.random.randint(100,1000) for i in range(num_agents)]
 
